@@ -35,11 +35,20 @@ class MainActivity : AppCompatActivity() {
         if (TextUtils.isEmpty(username)) {
             focusView = editTextUserName
             cancel = true
-            Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter Username", Toast.LENGTH_SHORT).show()
+        }else if (!username.equals("xyzz@gmail.com",  true)) {
+            focusView = editTextUserName
+            cancel = true
+            Toast.makeText(this, "Please enter valid Username", Toast.LENGTH_SHORT).show()
+
         } else if (TextUtils.isEmpty(password)) {
             focusView = editTextPassword
             cancel = true
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show()
+        } else if(!password.equals("12345",true )) {
+            focusView = editTextPassword
+            cancel = true
+            Toast.makeText(this, "Please enter Correct password", Toast.LENGTH_SHORT).show()
         }
 
         if(cancel) {
