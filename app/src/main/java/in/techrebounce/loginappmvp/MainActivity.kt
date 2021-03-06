@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), LoginView{
         setContentView(R.layout.activity_main)
         bindViews()
 
-        loginPresenter = LoginPresenterImpl(this)
+        loginPresenter = LoginPresenterImpl(this@MainActivity)
 
         textViewSubmit.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {

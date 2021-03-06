@@ -2,10 +2,10 @@ package `in`.techrebounce.loginappmvp
 
 import android.text.TextUtils
 
-class LoginModelImpl(param: Any?) : LoginModel {
-    lateinit var loginPresenter: LoginPresenter
+class LoginModelImpl(loginPresenter: LoginPresenter) : LoginModel {
+    var loginPresenter: LoginPresenter
 
-    fun LoginModelImpl(loginPresenter: LoginPresenter) {
+    init {
         this.loginPresenter = loginPresenter
     }
 

@@ -1,10 +1,10 @@
 package `in`.techrebounce.loginappmvp
 
-class LoginPresenterImpl(mainActivity: MainActivity) : LoginPresenter {
-    lateinit var loginView: LoginView
-    lateinit var loginModel: LoginModel
+class LoginPresenterImpl(loginView: LoginView) : LoginPresenter {
+     var loginView: LoginView
+     var loginModel: LoginModel
 
-    fun LoginPresenterImpl(loginView: LoginView) {
+    init {
         this.loginView = loginView
         this.loginModel = LoginModelImpl(this)
     }
