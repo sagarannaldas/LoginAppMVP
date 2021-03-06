@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), LoginView{
         if (TextUtils.isEmpty(username)) {
             focusView = editTextUserName
             cancel = true
-            Toast.makeText(this, "Please enter Username", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter EmailId", Toast.LENGTH_SHORT).show()
         }else if (!username.equals("xyz@gmail.com",  true)) {
             focusView = editTextUserName
             cancel = true
@@ -78,6 +78,6 @@ class MainActivity : AppCompatActivity(), LoginView{
     }
 
     override fun onError(errorMessage: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(this,errorMessage,Toast.LENGTH_SHORT).show()
     }
 }

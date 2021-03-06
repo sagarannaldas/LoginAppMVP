@@ -22,6 +22,6 @@ class LoginPresenterImpl(mainActivity: MainActivity) : LoginPresenter {
     }
 
     override fun onError(errorMessage: String) {
-        TODO("Not yet implemented")
+        loginView.onError(errorMessage)
     }
 }

@@ -1,5 +1,7 @@
 package `in`.techrebounce.loginappmvp
 
+import android.text.TextUtils
+
 class LoginModelImpl(param: Any?) : LoginModel {
     lateinit var loginPresenter: LoginPresenter
 
@@ -8,6 +10,17 @@ class LoginModelImpl(param: Any?) : LoginModel {
     }
 
     override fun validateUser(emailId: String, password: String) {
-        TODO("Not yet implemented")
+
+        if(TextUtils.isEmpty(emailId)) {
+            loginPresenter.onError("please enter emailId")
+        } else if (!emailId.equals("xyz@gmail.com",  true)) {
+            loginPresenter.onError("Please enter valid emailId")
+        } else if (TextUtils.isEmpty(password)) {
+            loginPresenter.onError("Please enter password")
+        } else if(password.equals("12345",true)) {
+            loginPresenter.onError("Please Enter valid Password")
+        }
+
+
     }
 }
