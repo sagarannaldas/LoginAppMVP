@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), LoginView{
 
         textViewSubmit.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                validateUser()
+//                validateUser()
             }
         })
     }
@@ -70,7 +70,8 @@ class MainActivity : AppCompatActivity(), LoginView{
     }
 
     override fun onSuccess() {
-        TODO("Not yet implemented")
+        val intent = Intent(this@MainActivity,HomeActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onFailure() {

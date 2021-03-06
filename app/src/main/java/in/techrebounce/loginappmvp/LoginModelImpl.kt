@@ -19,6 +19,8 @@ class LoginModelImpl(param: Any?) : LoginModel {
             loginPresenter.onError("Please enter password")
         } else if(password.equals("12345",true)) {
             loginPresenter.onError("Please Enter valid Password")
+        } else {
+            loginPresenter.onSuccess()
         }
 
 

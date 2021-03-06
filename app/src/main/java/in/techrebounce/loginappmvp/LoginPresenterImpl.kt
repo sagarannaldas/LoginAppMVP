@@ -10,11 +10,11 @@ class LoginPresenterImpl(mainActivity: MainActivity) : LoginPresenter {
     }
 
     override fun onHandleLogin(emailId: String, password: String) {
-        TODO("Not yet implemented")
+        loginModel.validateUser(emailId, password)
     }
 
     override fun onSuccess() {
-        TODO("Not yet implemented")
+        loginView.onSuccess()
     }
 
     override fun onFailure() {
