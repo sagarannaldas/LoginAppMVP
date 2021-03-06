@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), LoginView{
     lateinit var editTextUserName: EditText
     lateinit var editTextPassword: EditText
     lateinit var textViewSubmit: TextView
@@ -62,5 +62,17 @@ class MainActivity : AppCompatActivity() {
         editTextUserName = findViewById(R.id.editTextUserName)
         editTextPassword = findViewById(R.id.editTextPassword)
         textViewSubmit = findViewById(R.id.textViewSubmit)
+    }
+
+    override fun onSuccess() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onFailure() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onError(errorMessage: String) {
+        TODO("Not yet implemented")
     }
 }
