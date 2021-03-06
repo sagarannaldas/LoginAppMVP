@@ -13,11 +13,16 @@ class MainActivity : AppCompatActivity(), LoginView{
     lateinit var editTextUserName: EditText
     lateinit var editTextPassword: EditText
     lateinit var textViewSubmit: TextView
+    lateinit var loginPresenter: LoginPresenter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         bindViews()
+
+        loginPresenter = LoginPresenterImpl(this)
+
         textViewSubmit.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
                 validateUser()
