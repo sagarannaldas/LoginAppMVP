@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), LoginView{
         textViewSubmit.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
 //                validateUser()
+                loginPresenter.onHandleLogin(editTextUserName.text.toString(), editTextPassword.text.toString())
             }
         })
     }
